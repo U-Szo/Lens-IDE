@@ -8,7 +8,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
-        self.setWindowTitle("Lens IDE")
+        self.setWindowTitle("Lens TE")
         self.ui.setupUi(self)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.ui.title_bar_widgets_dict["minimize_button"].clicked.connect(lambda: self.showMinimized())
@@ -52,7 +52,7 @@ class MainWindow(QtWidgets.QMainWindow):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    my_app_id = 'Lens IDE'
+    my_app_id = 'Lens TE'
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(my_app_id)
     font_id = QtGui.QFontDatabase.addApplicationFont("fonts/Consolas.ttf")
     _fontstr = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
